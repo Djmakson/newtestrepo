@@ -40,18 +40,18 @@ pipeline {
             }
         }
 
-        stage('Deploy to Nexus') {
-            steps {
-               nexusArtifactUploader artifacts: [[artifactId: 'RegistrationApp',
-               classifier: '', file: 'target/RegistrationApp-*.war',
-               type: 'war']], 
-               credentialsId: 'nexus', 
-               groupId: 'com.example', 
-               nexusUrl: '3.82.175.171:8081', 
-               nexusVersion: 'nexus3', 
-               protocol: 'http', 
-               repository: 'my-repo',
-               version: 'v1.$GIT_COMMIT'
+        // stage('Deploy to Nexus') {
+        //     steps {
+        //        nexusArtifactUploader artifacts: [[artifactId: 'RegistrationApp',
+        //        classifier: '', file: 'target/RegistrationApp-*.war',
+        //        type: 'war']], 
+        //        credentialsId: 'nexus', 
+        //        groupId: 'com.example', 
+        //        nexusUrl: '3.82.175.171:8081', 
+        //        nexusVersion: 'nexus3', 
+        //        protocol: 'http', 
+        //        repository: 'my-repo',
+        //        version: 'v1.$GIT_COMMIT'
             }
         }
         
