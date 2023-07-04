@@ -51,9 +51,9 @@ pipeline {
         //        nexusVersion: 'nexus3', 
         //        protocol: 'http', 
         //        repository: 'my-repo',
-        //        version: 'v1.$GIT_COMMIT'
-            }
-        }
+        //        version: 'v1.$GIT_COMMIT'git
+        //     }
+        // }
         
         stage('Deploy to Tomcat') {
             steps {
